@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Choosing Move View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ChoosingMoveViewController" customModule="papierNozyceKamien" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="center" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="lTD-9P-2wf">
+                                <rect key="frame" x="20" y="10" width="560" height="590"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zaufaj sercu kart i wybierz swów ruch!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSX-iY-JXN">
+                                        <rect key="frame" x="44" y="0.0" width="473" height="147"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSM-za-ORb" userLabel="PaperButton">
+                                        <rect key="frame" x="56" y="148" width="449" height="147"/>
+                                        <state key="normal" image="Paper"/>
+                                        <connections>
+                                            <action selector="choosingPaperAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QLP-sU-S0t"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdd-vt-paj" userLabel="RockButton">
+                                        <rect key="frame" x="80" y="296" width="400" height="146"/>
+                                        <state key="normal" image="Rock"/>
+                                        <connections>
+                                            <action selector="choosingRockAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tUn-De-Zwp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hik-Gv-TWw" userLabel="ScissorsButton">
+                                        <rect key="frame" x="0.0" y="443" width="560" height="147"/>
+                                        <state key="normal" image="Scissors"/>
+                                        <connections>
+                                            <action selector="choosingScissorsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="53e-yr-Mh5"/>
+                                            <segue destination="gp1-dv-S9z" kind="show" identifier="AutoScissors" id="73E-Bp-qMc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="lTD-9P-2wf" secondAttribute="trailing" id="8gH-md-bzR"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="lTD-9P-2wf" secondAttribute="bottom" id="boG-jd-1D4"/>
+                            <constraint firstItem="lTD-9P-2wf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="dn3-us-ASx"/>
+                            <constraint firstItem="lTD-9P-2wf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="o1S-xA-Jem"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="gp1-dv-S9z" kind="presentation" identifier="HalfAutoRock" id="X7E-6D-hiM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="j9o-0s-pJ4">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" id="gp1-dv-S9z" customClass="ResultViewController" customModule="papierNozyceKamien" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Eje-Ke-weu"/>
+                        <viewControllerLayoutGuide type="bottom" id="CPm-03-Jby"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="boy-wn-wbx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxk-dU-ZID">
+                                <rect key="frame" x="20" y="30" width="560" height="570"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="USU-5F-DUm">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="570"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Przeciwnik wybrał:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jG-2F-2Wj">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="106"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I67-we-3WG">
+                                                <rect key="frame" x="0.0" y="116" width="560" height="106"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6p-ET-jZm">
+                                                <rect key="frame" x="0.0" y="232" width="560" height="106"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="trP-i6-5qJ">
+                                                <rect key="frame" x="0.0" y="348" width="560" height="106"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmW-As-zX1">
+                                                <rect key="frame" x="0.0" y="464" width="560" height="106"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="Play Again!"/>
+                                                <connections>
+                                                    <segue destination="BYZ-38-t0r" kind="show" id="NE6-8T-pKu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wxk-dU-ZID" secondAttribute="trailing" id="AEA-aP-lK9"/>
+                            <constraint firstItem="Wxk-dU-ZID" firstAttribute="leading" secondItem="boy-wn-wbx" secondAttribute="leadingMargin" id="Bfa-Cq-txM"/>
+                            <constraint firstItem="Wxk-dU-ZID" firstAttribute="top" secondItem="Eje-Ke-weu" secondAttribute="bottom" constant="10" id="n40-V5-lnQ"/>
+                            <constraint firstItem="CPm-03-Jby" firstAttribute="top" secondItem="Wxk-dU-ZID" secondAttribute="bottom" id="pia-Zk-aFO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultImage" destination="trP-i6-5qJ" id="3D7-h4-lRX"/>
+                        <outlet property="resultText" destination="a6p-ET-jZm" id="y72-QH-Zf8"/>
+                        <outlet property="whatEnemyPickedImage" destination="I67-we-3WG" id="tF4-jV-o57"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YML-Kr-SbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1172" y="429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Paper" width="449" height="192"/>
+        <image name="Rock" width="400" height="320"/>
+        <image name="Scissors" width="900" height="495"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="X7E-6D-hiM"/>
+    </inferredMetricsTieBreakers>
+</document>

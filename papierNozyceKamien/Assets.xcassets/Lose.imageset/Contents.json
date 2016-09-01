@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "12583698-The-words-You-Lose-on-two-red-dice-symbolizing-the-50-50-odds-of-winning-or-losing-in-a-game-or-comp-Stock-Photo.jpg",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "12583698-The-words-You-Lose-on-two-red-dice-symbolizing-the-50-50-odds-of-winning-or-losing-in-a-game-or-comp-Stock-Photo-1.jpg",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "12583698-The-words-You-Lose-on-two-red-dice-symbolizing-the-50-50-odds-of-winning-or-losing-in-a-game-or-comp-Stock-Photo-2.jpg",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
