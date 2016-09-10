@@ -9,9 +9,17 @@
 import UIKit
 
 class ChoosingMoveViewController: UIViewController {
+    @IBOutlet weak var paperButton: UIButton!
+    @IBOutlet weak var rockButton: UIButton!
+    @IBOutlet weak var scissorsButton: UIButton!
+    @IBOutlet weak var historyButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let buttonsArray=[paperButton,rockButton,scissorsButton]
+        for button in buttonsArray {
+            button.imageView?.contentMode = .ScaleAspectFit
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -22,7 +30,6 @@ class ChoosingMoveViewController: UIViewController {
     
     @IBAction func choosingPaperAction(sender: UIButton){
         
-        print("paper!")
         var controller: ResultViewController
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultViewController") as! ResultViewController
         
@@ -35,7 +42,7 @@ class ChoosingMoveViewController: UIViewController {
     }
     
     @IBAction func choosingRockAction(sender: UIButton) {
-        performSegueWithIdentifier("HalfAutoRock", sender: self)
+        performSegueWithIdentifier("HalfAutoRock", sender: sender)
         
     }
     
@@ -44,15 +51,17 @@ class ChoosingMoveViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        let controller=segue.destinationViewController as! ResultViewController
-        if(segue.identifier=="HalfAutoRock")
+        if(sender!.tag==1)
         {
-            controller.playerPick=gamePick.Rock
-        }
-        if(segue.identifier=="AutoScissors")
-        {
-            controller.playerPick=gamePick.Scissors
+            let controller=segue.destinationViewController as! ResultViewController
+            if(segue.identifier=="HalfAutoRock")
+            {
+                controller.playerPick=gamePick.Rock
+            }
+            if(segue.identifier=="AutoScissors")
+            {
+                controller.playerPick=gamePick.Scissors
+            }
         }
     }
 }

@@ -15,7 +15,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var whatEnemyPickedImage: UIImageView!
     @IBOutlet weak var resultText: UILabel!
     @IBOutlet weak var resultImage: UIImageView!
-    
+    var singleGameHistory:GameHistory?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,8 @@ class ResultViewController: UIViewController {
         if(randomNumber==2){enemyPick=gamePick.Scissors}
         print(String(enemyPick))
         whatEnemyPickedImage.image=UIImage(named: String(enemyPick))
+        
+        singleGameHistory = GameHistory(PlayerChoose: playerPick, CPUChoose: enemyPick, Result: gameResult.Draw)
         
         if(playerPick==enemyPick)
         {
@@ -43,28 +45,26 @@ class ResultViewController: UIViewController {
             if(playerPick==gamePick.Scissors && enemyPick==gamePick.Rock){Lose()}
             if(playerPick==gamePick.Scissors && enemyPick==gamePick.Paper){Win()}
         }
+        SaveHistory()
+    }
+    
+    func SaveHistory()
+    {
+        AllGameHistory.addHistory(singleGameHistory!)
+        print("Zapisalem historie! \(AllGameHistory.history.count)")
     }
     
     func Win()
     {
         resultText.text="Wygrałeś! Jesteś zwycięzcą"
         resultImage.image=UIImage(named: "Win")
+        singleGameHistory?.Result=gameResult.Win
     }
     func Lose()
     {
         resultText.text="Przegrałeś, przegrywie jeden :<"
         resultImage.image=UIImage(named: "Lose")
+        singleGameHistory?.Result=gameResult.Lose
     }
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func rezult(){
-        var randomNumber = Int(arc4random_uniform(3))
-        print(randomNumber)
-        
-    }
+
 }

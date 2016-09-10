@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -18,38 +18,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="lTD-9P-2wf">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="lTD-9P-2wf">
                                 <rect key="frame" x="20" y="10" width="560" height="590"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zaufaj sercu kart i wybierz swów ruch!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSX-iY-JXN">
-                                        <rect key="frame" x="44" y="0.0" width="473" height="147"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="QUE-6z-742"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSM-za-ORb" userLabel="PaperButton">
-                                        <rect key="frame" x="56" y="148" width="449" height="147"/>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSM-za-ORb" userLabel="PaperButton">
+                                        <rect key="frame" x="0.0" y="81" width="560" height="155"/>
                                         <state key="normal" image="Paper"/>
                                         <connections>
                                             <action selector="choosingPaperAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QLP-sU-S0t"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdd-vt-paj" userLabel="RockButton">
-                                        <rect key="frame" x="80" y="296" width="400" height="146"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdd-vt-paj" userLabel="RockButton">
+                                        <rect key="frame" x="0.0" y="237" width="560" height="156"/>
                                         <state key="normal" image="Rock"/>
                                         <connections>
                                             <action selector="choosingRockAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tUn-De-Zwp"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hik-Gv-TWw" userLabel="ScissorsButton">
-                                        <rect key="frame" x="0.0" y="443" width="560" height="147"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hik-Gv-TWw" userLabel="ScissorsButton">
+                                        <rect key="frame" x="0.0" y="394" width="560" height="155"/>
                                         <state key="normal" image="Scissors"/>
                                         <connections>
                                             <action selector="choosingScissorsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="53e-yr-Mh5"/>
                                             <segue destination="gp1-dv-S9z" kind="show" identifier="AutoScissors" id="73E-Bp-qMc"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJH-Fa-a8c" userLabel="ViewHistoryButton">
+                                        <rect key="frame" x="0.0" y="550" width="560" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Qvk-zd-Z70"/>
+                                        </constraints>
+                                        <state key="normal" title="View Games History"/>
+                                        <connections>
+                                            <segue destination="f2Z-wN-xbp" kind="show" id="c2I-To-IH3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Jdd-vt-paj" firstAttribute="height" secondItem="Hik-Gv-TWw" secondAttribute="height" id="mvx-I8-hx9"/>
+                                    <constraint firstItem="FSM-za-ORb" firstAttribute="height" secondItem="Jdd-vt-paj" secondAttribute="height" id="rqc-TA-3Qw"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -61,12 +78,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="historyButton" destination="VJH-Fa-a8c" id="2mV-pt-rLd"/>
+                        <outlet property="paperButton" destination="FSM-za-ORb" id="8rq-dF-SYg"/>
+                        <outlet property="rockButton" destination="Jdd-vt-paj" id="CjE-dH-jDQ"/>
+                        <outlet property="scissorsButton" destination="Hik-Gv-TWw" id="hSQ-1T-Hqa"/>
                         <segue destination="gp1-dv-S9z" kind="presentation" identifier="HalfAutoRock" id="X7E-6D-hiM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="429"/>
+            <point key="canvasLocation" x="1505" y="425"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="j9o-0s-pJ4">
@@ -83,36 +104,61 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxk-dU-ZID">
                                 <rect key="frame" x="20" y="30" width="560" height="570"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="USU-5F-DUm">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="USU-5F-DUm">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="570"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Przeciwnik wybrał:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jG-2F-2Wj">
-                                                <rect key="frame" x="0.0" y="0.0" width="560" height="106"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="XWV-i0-FkM"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I67-we-3WG">
-                                                <rect key="frame" x="0.0" y="116" width="560" height="106"/>
+                                                <rect key="frame" x="0.0" y="62" width="560" height="191"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6p-ET-jZm">
-                                                <rect key="frame" x="0.0" y="232" width="560" height="106"/>
+                                                <rect key="frame" x="0.0" y="255" width="560" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="3b4-Ie-KWs"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="trP-i6-5qJ">
-                                                <rect key="frame" x="0.0" y="348" width="560" height="106"/>
+                                                <rect key="frame" x="0.0" y="317" width="560" height="191"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmW-As-zX1">
-                                                <rect key="frame" x="0.0" y="464" width="560" height="106"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <state key="normal" title="Play Again!"/>
-                                                <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="NE6-8T-pKu"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ftn-bY-2U6">
+                                                <rect key="frame" x="0.0" y="510" width="560" height="60"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmW-As-zX1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="264" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="2ri-Pe-iFg"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                        <state key="normal" title="Play Again!"/>
+                                                        <connections>
+                                                            <segue destination="BYZ-38-t0r" kind="show" id="NE6-8T-pKu"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhE-5l-oks">
+                                                        <rect key="frame" x="264" y="8" width="296" height="44"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                        <state key="normal" title="View History"/>
+                                                        <connections>
+                                                            <segue destination="f2Z-wN-xbp" kind="show" id="7P0-Pb-EQc"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="I67-we-3WG" firstAttribute="height" secondItem="trP-i6-5qJ" secondAttribute="height" id="IIa-dg-eLy"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -133,7 +179,85 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YML-Kr-SbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1172" y="429"/>
+            <point key="canvasLocation" x="1516" y="1413"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="w8t-By-MgK">
+            <objects>
+                <viewController id="f2Z-wN-xbp" customClass="HistoryViewController" customModule="papierNozyceKamien" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v3b-FM-xt4"/>
+                        <viewControllerLayoutGuide type="bottom" id="heD-U3-kCz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WxI-nn-qy8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="78y-g9-QNM">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qgm-tE-Wvo">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="520"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gamesHistory" textLabel="g1m-Ho-mxa" detailTextLabel="rfs-ap-aZx" style="IBUITableViewCellStyleSubtitle" id="m9s-9e-PBR">
+                                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m9s-9e-PBR" id="koZ-J8-UcH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g1m-Ho-mxa">
+                                                            <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rfs-ap-aZx">
+                                                            <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="f2Z-wN-xbp" id="o8K-CY-EHF"/>
+                                        </connections>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfn-S6-psp">
+                                        <rect key="frame" x="0.0" y="520" width="600" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="vjG-iv-h5F"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Play Again!"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Pwm-NG-76C"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="78y-g9-QNM" firstAttribute="top" secondItem="v3b-FM-xt4" secondAttribute="bottom" id="3KR-t9-UrA"/>
+                            <constraint firstItem="78y-g9-QNM" firstAttribute="leading" secondItem="WxI-nn-qy8" secondAttribute="leading" id="7tg-14-kwX"/>
+                            <constraint firstAttribute="trailing" secondItem="78y-g9-QNM" secondAttribute="trailing" id="lsR-aI-3Xg"/>
+                            <constraint firstItem="heD-U3-kCz" firstAttribute="top" secondItem="78y-g9-QNM" secondAttribute="bottom" id="oSB-r3-nVc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Qgm-tE-Wvo" id="h7S-Av-pFw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tbO-oP-XE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2426" y="698"/>
         </scene>
     </scenes>
     <resources>
@@ -142,6 +266,8 @@
         <image name="Scissors" width="900" height="495"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Pwm-NG-76C"/>
+        <segue reference="c2I-To-IH3"/>
         <segue reference="X7E-6D-hiM"/>
     </inferredMetricsTieBreakers>
 </document>

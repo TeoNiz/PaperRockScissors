@@ -13,3 +13,25 @@ public enum gamePick{
     case Rock
     case Scissors
 }
+
+public enum gameResult
+{
+    case Win
+    case Lose
+    case Draw
+}
+
+public struct GameHistory {
+    var PlayerChoose:gamePick
+    var CPUChoose:gamePick
+    var Result:gameResult
+}
+
+public class AllGameHistory{
+    public static var history:[GameHistory] = []
+    
+    public static func addHistory(singleHistory:GameHistory)
+    {
+        history.append(singleHistory)
+    }
+}

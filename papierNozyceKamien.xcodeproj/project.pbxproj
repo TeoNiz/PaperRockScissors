@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C2570AE1D844DB4001A02FB /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2570AD1D844DB4001A02FB /* HistoryViewController.swift */; };
 		7C91BDE21D749EE8001E7E2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C91BDE11D749EE8001E7E2A /* AppDelegate.swift */; };
 		7C91BDE41D749EE8001E7E2A /* ChoosingMoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C91BDE31D749EE8001E7E2A /* ChoosingMoveViewController.swift */; };
 		7C91BDE71D749EE8001E7E2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C91BDE51D749EE8001E7E2A /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C2570AD1D844DB4001A02FB /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		7C91BDDE1D749EE8001E7E2A /* papierNozyceKamien.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = papierNozyceKamien.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C91BDE11D749EE8001E7E2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C91BDE31D749EE8001E7E2A /* ChoosingMoveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingMoveViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				7C91BDE11D749EE8001E7E2A /* AppDelegate.swift */,
 				7C956A351D78A5C800869B55 /* gamePick.swift */,
+				7C2570AD1D844DB4001A02FB /* HistoryViewController.swift */,
 				7C91BDE31D749EE8001E7E2A /* ChoosingMoveViewController.swift */,
 				7C956A331D78878600869B55 /* ResultViewController.swift */,
 				7C91BDE51D749EE8001E7E2A /* Main.storyboard */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C91BDE41D749EE8001E7E2A /* ChoosingMoveViewController.swift in Sources */,
+				7C2570AE1D844DB4001A02FB /* HistoryViewController.swift in Sources */,
 				7C91BDE21D749EE8001E7E2A /* AppDelegate.swift in Sources */,
 				7C956A361D78A5C800869B55 /* gamePick.swift in Sources */,
 				7C956A341D78878600869B55 /* ResultViewController.swift in Sources */,
